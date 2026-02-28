@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Mid from './components/Mid'
 import './App.css'
 import User from './components/User'
+import VideoSection from './components/VideoSection'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
      <Header/>
      <Mid/>
     <User/>
+    <VideoSection/>
      </div>
     
      
