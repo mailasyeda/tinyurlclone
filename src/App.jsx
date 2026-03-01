@@ -4,6 +4,10 @@ import Mid from './components/Mid'
 import './App.css'
 import User from './components/User'
 import VideoSection from './components/VideoSection'
+import Feature from './components/Feature'
+import FAQ from './components/FAQ'
+import TransformSection from './components/TransformSection'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -14,6 +18,10 @@ function App() {
      <Mid/>
     <User/>
     <VideoSection/>
+    <Feature/>
+    <TransformSection/>
+    <FAQ/>
+    <Footer/>
      </div>
     
      

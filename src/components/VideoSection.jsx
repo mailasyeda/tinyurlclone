@@ -3,10 +3,7 @@ import React from "react";
 function VideoSection() {
   return (
     <div className="flex flex-col md:flex-row">
-
-
       <div className="relative w-full md:w-1/2 h-400px overflow-hidden">
-
         <video
           src="public/video.mp4"
           autoPlay
@@ -15,9 +12,8 @@ function VideoSection() {
           playsInline
           className="w-full h-full object-cover"
         />
-    </div>
+      </div>
       <div className="w-full md:w-1/2 bg-[#1f6f8b] text-white p-10 md:p-16">
-
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Link Shortening Done <br /> Quick and Easy
         </h2>
@@ -45,7 +41,6 @@ function VideoSection() {
             Contact Sales
           </button>
         </div>
-
       </div>
     </div>
   );
