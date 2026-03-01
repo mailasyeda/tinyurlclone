@@ -54,7 +54,8 @@ export default function TransformSection() {
 
         <div className="relative">
            <video
-          src="public/video1.mp4"
+          src="/video1.mp4"
+           type="video/mp4"
           autoPlay
           loop
           muted
