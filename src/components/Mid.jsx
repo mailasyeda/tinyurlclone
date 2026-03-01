@@ -1,6 +1,31 @@
 import React, { useState } from "react";
 function Mid() {
     const [url, setUrl] = useState("");
+    const [alias, setAlias] = useState("");
+   const [shortUrl, setShortUrl] = useState("");
+   const [loading, setLoading] = useState(false);
+
+   const handleShorten = async () => {
+    if (!url) {
+      alert("Please enter a URL");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`);
+      const data = await res.text();
+
+      setShortUrl(data);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
+
+    setLoading(false);
+  };
+
     return(
          <div className="flex flex-col md:flex-row items-center justify-between px-8 py-16">
 
@@ -53,14 +78,27 @@ function Mid() {
             <input
               type="text"
               placeholder="Add alias"
+               value={alias}
+              onChange={(e) => setAlias(e.target.value)}
               className="w-1/2 border px-2 py-2 rounded-md"
             />
           </div>
 
           
-          <button className="w-full bg-green-600 hover:bg-green-800 cursor-pointer text-white py-2 rounded-md font-semibold transition-opacity">
+          <button 
+          onClick={handleShorten}
+          className="w-full bg-green-600 hover:bg-green-800 cursor-pointer text-white py-2 rounded-md font-semibold transition-opacity">
             Shorten Link
+            {loading ? "Loading..." : "Shorten Link"}
           </button>
+           {shortUrl && (
+        <div className="mt-4">
+          <p className="text-green-700">Short URL:</p>
+          <a href={shortUrl} target="_blank" className="text-blue-600">
+            {shortUrl}
+          </a>
+        </div>
+      )}
         </div>
       </div>
   );
