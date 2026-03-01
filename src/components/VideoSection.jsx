@@ -5,7 +5,8 @@ function VideoSection() {
     <div className="flex flex-col md:flex-row">
       <div className="relative w-full md:w-1/2 h-400px overflow-hidden">
         <video
-          src="public/video.mp4"
+          src="/video.mp4"
+          type="video/mp4"
           autoPlay
           loop
           muted
