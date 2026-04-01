@@ -35,7 +35,7 @@ function Mid() {
         </div>
 
        
-        <div className="bg-white text-black rounded-xl shadow-lg p-6 w-full max-w-md mt-10 md:mt-0">
+        <div className="bg-amber-100 text-black rounded-xl shadow-lg p-6 w-full max-w-md mt-10 md:mt-0">
 
           <div className="flex justify-between mb-4">
             <button className="font-semibold cursor-pointer">Shorten a Link</button>
@@ -65,12 +65,12 @@ function Mid() {
           
           <button 
           onClick={handleShorten}
-          className="w-full bg-green-600 hover:bg-green-800 cursor-pointer text-white py-2 rounded-md font-semibold transition-opacity">
+          className="w-full bg-purple-600 hover:bg-green-800 cursor-pointer text-white py-2 rounded-md font-semibold transition-opacity">
             Shorten Link
           </button>
         {shortUrl && (
           <div className="mt-4">
-            <p className="text-green-700">Short URL:</p>
+            <p className="text-purple-700">Short URL:</p>
             <a href={shortUrl} className="text-blue-600 underline">
               {shortUrl}
              </a>
