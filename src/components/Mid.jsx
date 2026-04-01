@@ -5,27 +5,9 @@ function Mid() {
    const [shortUrl, setShortUrl] = useState("");
    const [loading, setLoading] = useState(false);
 
-   const handleShorten = async () => {
-    if (!url) {
-      alert("Please enter a URL");
-      return;
-    }
-
     setLoading(true);
 
-    try {
-      const res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`);
-      const data = await res.text();
-
-      setShortUrl(data);
-    } catch (error) {
-      console.error(error);
-      alert("Something went wrong");
-    }
-
-    setLoading(false);
-  };
-
+  
     return(
          <div className="flex flex-col md:flex-row items-center justify-between px-8 py-16">
 
