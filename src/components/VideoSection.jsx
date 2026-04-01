@@ -14,7 +14,7 @@ function VideoSection() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="w-full md:w-1/2 bg-[#1f6f8b] text-white p-10 md:p-16">
+      <div className="w-full md:w-1/2 bg-[#214785] text-white p-10 md:p-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Link Shortening Done <br /> Quick and Easy
         </h2>

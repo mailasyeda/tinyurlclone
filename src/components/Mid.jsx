@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 function Mid() {
-    const [url, setUrl] = useState("");
-    const [alias, setAlias] = useState("");
-   const [shortUrl, setShortUrl] = useState("");
-   const [loading, setLoading] = useState(false);
+  const [shortUrl, setShortUrl] = useState("");
 
-    setLoading(true);
+  const handleShorten = () => {
+    
+    setShortUrl();
+  };
 
   
     return(
@@ -47,7 +47,6 @@ function Mid() {
           <input
             type="text"
             placeholder="Paste long URL here"
-            value={url}
             className="w-full border rounded-md px-3 py-2 mt-1 mb-4"
           />
 
@@ -68,14 +67,18 @@ function Mid() {
           onClick={handleShorten}
           className="w-full bg-green-600 hover:bg-green-800 cursor-pointer text-white py-2 rounded-md font-semibold transition-opacity">
             Shorten Link
-            {loading ? "Loading..." : "Shorten Link"}
           </button>
-        <div className="mt-4">
-          <p className="text-green-700">Short URL:</p>
-
+        {shortUrl && (
+          <div className="mt-4">
+            <p className="text-green-700">Short URL:</p>
+            <a href={shortUrl} className="text-blue-600 underline">
+              {shortUrl}
+             </a>
         </div>
+        )}
         </div>
       </div>
+
   );
 }
 export default Mid;

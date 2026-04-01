@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <div className="bg-linear-to-r from-[#0c3b5a] via-[#0b3552] to-[#082a40] min-h-screen">
+    <div className="bg-linear-to-r from-[#060d42] via-[#2a495f] to-[#022b46] min-h-screen">
      <Header/>
      <Mid/>
     <User/>
