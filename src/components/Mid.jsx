@@ -48,7 +48,6 @@ function Mid() {
             type="text"
             placeholder="Paste long URL here"
             value={url}
-            onChange={(e) => setUrl(e.target.value)}
             className="w-full border rounded-md px-3 py-2 mt-1 mb-4"
           />
 
@@ -60,8 +59,6 @@ function Mid() {
             <input
               type="text"
               placeholder="Add alias"
-               value={alias}
-              onChange={(e) => setAlias(e.target.value)}
               className="w-1/2 border px-2 py-2 rounded-md"
             />
           </div>
@@ -73,14 +70,10 @@ function Mid() {
             Shorten Link
             {loading ? "Loading..." : "Shorten Link"}
           </button>
-           {shortUrl && (
         <div className="mt-4">
           <p className="text-green-700">Short URL:</p>
-          <a href={shortUrl} target="_blank" className="text-blue-600">
-            {shortUrl}
-          </a>
+
         </div>
-      )}
         </div>
       </div>
   );
