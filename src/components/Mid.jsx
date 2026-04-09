@@ -6,7 +6,7 @@ function Mid() {
 
   const handleShorten = async () => {
     try {
-      const res = await axios.post("http://localhost:5050/url", {
+      const res = await axios.post("http://localhost:5050/", {
         longUrl: longUrl,
       });
 
